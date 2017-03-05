@@ -5,6 +5,11 @@ var app = express();
 app.set('port', (process.env.PORT || 5000));
 
 
+
+app.get("/", function(req, res){
+    res.send("Enter a number or date as parameter in the address Bar.");
+});
+
 app.get('/:datestring', function(request, response) {
     var dateString = request.params.datestring;
     var date;
